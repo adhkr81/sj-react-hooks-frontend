@@ -1,0 +1,15 @@
+.footerContainer {
+    background-color: rgb(211, 211, 211);
+    width: 85%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}

@@ -1,0 +1,16 @@
+.container {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px
+}
+
+.buttonDiv {
+    width: 80%;
+}
+
+.font {
+    color : white
+}
