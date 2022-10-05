@@ -1,10 +1,11 @@
 import "./navbar.css"
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 
 export function Navbar () {
 
     return (
         <nav className="container">
-            <div className="font">HAPPY FACE</div>
+            <div className="font"><EmojiEmotionsIcon sx={{"color" : "red"}}/></div>
                 <div className="buttonDiv">
                     <button>useRef Demo</button>
                     <button>useMemo Demo</button>

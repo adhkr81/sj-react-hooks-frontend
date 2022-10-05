@@ -12,8 +12,9 @@
     position: relative;
     border-radius: 15px;
     border: 3px solid black;
-    width: 340px;
-    height: 220px;
+    width: 350px;
+    height: 250px;
+    font-weight: 200;
 }
 
 .textContainer {
