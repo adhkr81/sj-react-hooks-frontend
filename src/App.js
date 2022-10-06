@@ -15,22 +15,23 @@ function App() {
 
   function handleClick(e) {
 
-    const clicked = {"backgroundColor" : "red" , "color" : "blue"}
-    const unclicked = {"backgroundColor" : "blue" , "color" : "red"}
-    
-    cardsRefArray.current[e.target.id].style.fontWeight = 
-    (cardsRefArray.current[e.target.id].style.fontWeight === 
-      "200" 
-    ? "700" 
-    : "200")
+    console.log(e.target)
+    console.log(cardsRefArray.current[e.target.id].style.cssText)
 
-    buttonsRefArray.current[e.target.id].style = 
-    (cardsRefArray.current[e.target.id].style.fontWeight === 
-      "200" 
-    ? clicked 
-    : unclicked)
 
+    if (cardsRefArray.current[e.target.id].style.cssText === "font-weight: 200; border-color: rgb(118, 118, 118); border-width: 1px;") {
+      cardsRefArray.current[e.target.id].style.cssText = "font-weight: 700; border-color: black; border-width: 3px;"
+
+    } else {
+      cardsRefArray.current[e.target.id].style.cssText = "font-weight: 200; border-color: rgb(118, 118, 118); border-width: 1px;"
+    }
   }
+
+
+
+
+
+
 
 
   return (

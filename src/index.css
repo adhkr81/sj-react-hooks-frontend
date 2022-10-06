@@ -1,5 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-body {
-    font-family: 'Open Sans', sans-serif;
+/* SMALL */
+@media only screen and (max-width: 767px) {
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color:  rgb(211, 211, 211);
+    }
+
+    .App {
+        position: relative;
+        background-color: white;
+        width: 97%;
+        height: 97vh;
+        margin: auto;
+        margin-top: 12px;
+    }
+}
+
+
+/* MEDIUM */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+/* LARGE  */
+@media only screen and (min-width: 1024px) {
+    
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
 }

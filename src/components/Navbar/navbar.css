@@ -2,6 +2,7 @@
 @media only screen and (max-width: 767px) {
 
     .container {
+        position: relative;
         background-color: black;
         width: 100%;
         display: flex;
@@ -11,15 +12,30 @@
     }
 
     .buttonDiv {
-        width: 480px;
+        display: none;
+        position: absolute;
+        background-color: grey;
+        left: 10px;
+        top: 50px;
+        width: 110px;
+        height: 80px;
+        z-index: 200;
     }
 
-    .font {
-        color : white
+    .smile {
+        color : white;
+        position: absolute;
+        left: 46%
+    }
+
+    .search {
+        color : white;
+        position: absolute;
+        left: 80%
     }
 
     .useButton {
-        color: gray;
+        color: white;
         font-size: 0.7em;
         margin-right: 1px;
         background-color: transparent;
