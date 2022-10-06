@@ -2,6 +2,8 @@ import "./navbar.css"
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from "react-router-dom"
+
 
 export function Navbar ({list, navbarRefArray}) {
 
@@ -12,10 +14,12 @@ export function Navbar ({list, navbarRefArray}) {
                 <div className="buttonDiv">
                     {list.map((item) => {
                     return (
-                            <button style={{"color": "grey"}} className="useButton" id={item.number}
-                                    ref={(element) => navbarRefArray.current.push(element)}>
-                                        {item.name}
-                            </button>
+                            <Link to={`${item.name}`}>
+                                <button style={{"color": "grey"}} className="useButton" id={item.number}
+                                        ref={(element) => navbarRefArray.current.push(element)}>
+                                            {item.name} Demo
+                                </button>
+                            </Link>
                         )})}
                 </div>
             <div className="search"><SearchIcon /></div>
@@ -23,3 +27,4 @@ export function Navbar ({list, navbarRefArray}) {
     )
 
 }
+

@@ -1,7 +1,10 @@
 import { Navbar } from "./components/Navbar"
 import { Card } from "./components/Card"
 import { Footer } from "./components/Footer"
-import { useEffect, useRef, useState } from "react"
+import { Charts } from "./components/Charts"
+
+import { useEffect, useRef, Fragment } from "react"
+import { Routes, Route } from "react-router-dom"
 import "./index.css"
 
 
@@ -9,9 +12,9 @@ function App() {
 
   
   const list = [
-    {number: 1 , name: "useRef Demo"},
-    {number: 2 , name: "useMemo Demo"},
-    {number: 3 , name: "useEffect Demo"}
+    {number: 1 , name: "useRef"},
+    {number: 2 , name: "useMemo"},
+    {number: 3 , name: "useEffect"}
   ]
 
   const cardsRefArray = useRef([])
@@ -42,11 +45,23 @@ function App() {
     <div className="App">
       
       <Navbar list={list} navbarRefArray={navbarRefArray}/>
-      <Card list={list} cardsRefArray={cardsRefArray}/>
-      <Footer list={list} footerRefArray={footerRefArray} handleClick={handleClick}/>
+
+      <Routes>
+          <Route path='/useRef' element={
+                <Fragment>
+                  <Card list={list} cardsRefArray={cardsRefArray}/>
+                  <Footer list={list} footerRefArray={footerRefArray} handleClick={handleClick}/>
+                </Fragment>
+          } />
+
+          <Route path='/useMemo' element={<Charts />} />
+
+      </Routes>
 
     </div>
   );
 }
 
 export default App;
+
+
