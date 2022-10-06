@@ -1,6 +1,6 @@
 import "./footer.css"
 
-export function Footer ({handleClick, buttonsRefArray, list}) {
+export function Footer ({handleClick, footerRefArray, list}) {
 
 
     return (
@@ -9,11 +9,11 @@ export function Footer ({handleClick, buttonsRefArray, list}) {
                 {list.map((item) => {
                     return (
                         <button className="boldButton" style={{"color": "black" , "backgroundColor" : "white"}} 
-                        ref={(element) => buttonsRefArray.current.push(element)}
-                        id={item -1} onClick={handleClick} key={item + 10}>
-                            
+                        ref={(element) => footerRefArray.current.push(element)}
+                        id={item.number -1} onClick={handleClick} key={item.number + 10}>
+
                             <span className="B">B</span> 
-                            <span className="hide">Bold Card</span> <span className="btnNumber">{item}</span>
+                            <span className="hide">Bold Card</span> <span className="btnNumber">{item.number}</span>
                         </button>
                     )
                 })}

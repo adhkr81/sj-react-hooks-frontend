@@ -31,19 +31,27 @@
     .search {
         color : white;
         position: absolute;
-        left: 80%
+        left: 92%
     }
 
     .useButton {
-        color: white;
         font-size: 0.7em;
         margin-right: 1px;
         background-color: transparent;
     }
 
     .useButton:hover {
-        color: white;
-        background-color: transparent;
+        color: white
+    }
+
+    .search {
+        color: white
+    }
+
+    .hamburger {
+        color : white;
+        position: absolute;
+        left: 2%
     }
 }
 
@@ -78,12 +86,32 @@
         color: white;
         background-color: transparent;
     }
-}    
+
+    .useButton:hover {
+        color: white
+    }
+
+    .search {
+        color: white;
+        margin-right: 15px
+    }
+
+    .smile {
+        color : white;
+        margin-left: 15px;
+    }
+
+    .hamburger {
+        display: none
+    }
+}
+   
 
 /* LARGE  */
 @media only screen and (min-width: 1024px) {
 
     .container {
+        position: relative;
         background-color: black;
         width: 100%;
         display: flex;
@@ -110,5 +138,23 @@
     .useButton:hover {
         color: white;
         background-color: transparent;
+    }
+
+    .useButton:hover {
+        color: white
+    }
+
+    .search {
+        color: white;
+        margin-right: 15px
+    }
+
+    .smile {
+        color : white;
+        margin-left: 15px;
+    }
+
+    .hamburger {
+        display: none
     }
 }
