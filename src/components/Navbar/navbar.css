@@ -23,9 +23,10 @@
     }
 
     .smile {
-        color : white;
         position: absolute;
-        left: 46%
+        left: 46%;
+        background-color: white;
+        border-radius: 100%;
     }
 
     .search {
@@ -97,8 +98,9 @@
     }
 
     .smile {
-        color : white;
         margin-left: 15px;
+        background-color: white;
+        border-radius: 100%;
     }
 
     .hamburger {
@@ -152,6 +154,8 @@
     .smile {
         color : white;
         margin-left: 15px;
+        background-color: white;
+        border-radius: 100%;
     }
 
     .hamburger {

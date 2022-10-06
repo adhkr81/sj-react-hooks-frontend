@@ -8,7 +8,7 @@ export function Navbar ({list, navbarRefArray}) {
     return (
         <nav className="container">
             <div className="hamburger"><MenuIcon sx={{"color" : "white"}}/></div>
-            <div className="smile"><EmojiEmotionsIcon sx={{"color" : "white"}}/></div>
+            <div className="smile"><EmojiEmotionsIcon sx={{"color" : "black"}}/></div>
                 <div className="buttonDiv">
                     {list.map((item) => {
                     return (
