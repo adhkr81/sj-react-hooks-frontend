@@ -1,16 +1,98 @@
-.container {
-    background-color: black;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px
+/* SMALL */
+@media only screen and (max-width: 767px) {
+
+    .container {
+        background-color: black;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px
+    }
+
+    .buttonDiv {
+        width: 480px;
+    }
+
+    .font {
+        color : white
+    }
+
+    .useButton {
+        color: gray;
+        font-size: 0.7em;
+        margin-right: 1px;
+        background-color: transparent;
+    }
+
+    .useButton:hover {
+        color: white;
+        background-color: transparent;
+    }
 }
 
-.buttonDiv {
-    width: 80%;
-}
+/* MEDIUM */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 
-.font {
-    color : white
+    .container {
+        background-color: black;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px
+    }
+
+    .buttonDiv {
+        width: 80%;
+    }
+
+    .font {
+        color : white
+    }
+
+    .useButton {
+        color: gray;
+        font-size: 1.1em;
+        margin-right: 60px;
+        background-color: transparent;
+    }
+
+    .useButton:hover {
+        color: white;
+        background-color: transparent;
+    }
+}    
+
+/* LARGE  */
+@media only screen and (min-width: 1024px) {
+
+    .container {
+        background-color: black;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px
+    }
+
+    .buttonDiv {
+        width: 80%;
+    }
+
+    .font {
+        color : white
+    }
+
+    .useButton {
+        color: gray;
+        font-size: 1.1em;
+        margin-right: 60px;
+        background-color: transparent;
+    }
+
+    .useButton:hover {
+        color: white;
+        background-color: transparent;
+    }
 }

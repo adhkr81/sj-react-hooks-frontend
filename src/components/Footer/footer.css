@@ -1,15 +1,118 @@
-.footerContainer {
-    background-color: rgb(211, 211, 211);
-    width: 85%;
-    height: 60px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* SMALL */
+@media only screen and (max-width: 767px) {
+    .footerContainer {
+        background-color: rgb(211, 211, 211);
+        border: rgb(190, 189, 189) solid 1.5px;
+        width: 85%;
+        height: 60px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow: 0.8px 2px 6px rgba(0, 0, 0, .2);
+        margin-top: 40px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+    }
+
+    .boldButton {
+        position: relative;
+        border-radius: 9px;
+        border: rgb(124, 124, 124) solid 1.5px;
+        padding: 8px 30px 8px 30px;
+        font-size: 0.5em;
+    }
+
+    .B {
+        position: absolute;
+        left: 8px;
+        top: 3px;
+        font-weight: 700;
+        font-size: 2em;
+    }
+
+}    
+
+/* MEDIUM */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .footerContainer {
+        background-color: rgb(211, 211, 211);
+        border: rgb(190, 189, 189) solid 1.5px;
+        width: 85%;
+        height: 60px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow: 0.8px 2px 6px rgba(0, 0, 0, .2)
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+    }
+
+    .boldButton {
+        position: relative;
+        border-radius: 9px;
+        border: rgb(124, 124, 124) solid 1.5px;
+        padding: 8px 30px 8px 30px;
+        font-size: 0.5em;
+    }
+
+    .B {
+        position: absolute;
+        left: 8px;
+        top: 3px;
+        font-weight: 700;
+        font-size: 2em;
+    }
+
 }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
+/* LARGE  */
+@media only screen and (min-width: 1024px) {
+
+    .footerContainer {
+        background-color: rgb(211, 211, 211);
+        border: rgb(190, 189, 189) solid 1.5px;
+        width: 85%;
+        height: 60px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow: 0.8px 2px 6px rgba(0, 0, 0, .2)
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+    }
+
+    .boldButton {
+        position: relative;
+        border-radius: 9px;
+        border: rgb(124, 124, 124) solid 1.5px;
+        padding: 10px 35px 10px 35px;
+        font-size: 0.6em;
+    }
+
+    .B {
+        position: absolute;
+        left: 8px;
+        top: 5px;
+        font-weight: 700;
+        font-size: 2em;
+    }
+
 }

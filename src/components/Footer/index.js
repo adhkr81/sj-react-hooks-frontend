@@ -1,14 +1,19 @@
 import "./footer.css"
 
-export function Footer ({handleClick}) {
+export function Footer ({handleClick, buttonsRefArray, list}) {
 
 
     return (
         <footer className="footerContainer">
             <div className="footer">
-                <button id="0" onClick={handleClick}>Bold Card 1</button>
-                <button id="1" onClick={handleClick}>Bold Card 2</button>
-                <button id="2" onClick={handleClick}>Bold Card 3</button>
+                {list.map((item) => {
+                    return (
+                        <button className="boldButton" style={{"color": "black" , "backgroundColor" : "white"}} ref={(element) => buttonsRefArray.current.push(element)}
+                        id={item -1} onClick={handleClick}>
+                            <span className="B">B</span> Bold Card {item}
+                        </button>
+                    )
+                })}
             </div>
         </footer>
     )

@@ -1,34 +1,117 @@
-.screen {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: center;
-    margin: auto;
-    height: 400px;
-    width: 70%;
+/* SMALL */
+@media only screen and (max-width: 767px) {
+    .screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        height: 75vh;
+    }
+    
+    .cards {
+        margin-top: 30px;
+        position: relative;
+        border-radius: 15px;
+        border: 1px solid rgb(118, 118, 118);
+        width: 360px;
+        height: 140px;
+        font-weight: 200;
+    }
+    
+    .textContainer {
+        position: absolute;
+        left: 40px;
+        top: 25px;
+        width: 300px;
+        height: 100px;
+        font-size: 0.8em;
+    }
+    
+    .numberStyle {
+        font-weight: 1000;
+        font-size: 1.5em;
+        position: absolute;
+        left: 15px;
+        top: 6px;
+    }
+} 
+
+/* MEDIUM */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .screen {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+        margin: auto;
+        height: 75vh;
+        width: 770px;
+    }
+    
+    .cards {
+        position: relative;
+        border-radius: 15px;
+        border: 1px solid rgb(118, 118, 118);
+        width: 230px;
+        height: 140px;
+        font-weight: 200;
+    }
+    
+    .textContainer {
+        position: absolute;
+        left: 40px;
+        top: 25px;
+        width: 166px;
+        height: 100px;
+        font-size: 0.6em;
+    }
+    
+    .numberStyle {
+        font-weight: 1000;
+        font-size: 1.5em;
+        position: absolute;
+        left: 15px;
+        top: 6px;
+    }
+
 }
 
-.cards {
-    position: relative;
-    border-radius: 15px;
-    border: 3px solid black;
-    width: 350px;
-    height: 250px;
-    font-weight: 200;
-}
+/* LARGE  */
+@media only screen and (min-width: 1024px) {
+    .screen {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+        margin: auto;
+        height: 75vh;
+        width: 900px;
+    }
+    
+    .cards {
+        position: relative;
+        border-radius: 15px;
+        border: 1px solid rgb(118, 118, 118);
+        width: 270px;
+        height: 175px;
+        font-weight: 200;
+    }
+    
+    .textContainer {
+        position: absolute;
+        left: 60px;
+        top: 25px;
+        width: 170px;
+        height: 100px;
+        font-size: 0.7em;
+    }
+    
+    .numberStyle {
+        font-weight: 1000;
+        font-size: 1.7em;
+        position: absolute;
+        left: 20px;
+        top: 6px;
+    }
 
-.textContainer {
-    position: absolute;
-    left: 70px;
-    top: 30px;
-    width: 220px;
-    height: 80px;
-}
-
-.numberStyle {
-    font-weight: 700;
-    font-size: 2em;
-    position: absolute;
-    left: 20px;
-    top: 10px
 }

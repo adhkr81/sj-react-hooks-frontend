@@ -7,21 +7,38 @@ import "./index.css"
 
 function App() {
 
-  const itemEls = useRef(new Array())
+  
+  const list = [ 1, 2, 3 ]
+
+  const cardsRefArray = useRef([])
+  const buttonsRefArray = useRef([])
 
   function handleClick(e) {
-    itemEls.current[e.target.id].style.fontWeight = (itemEls.current[e.target.id].style.fontWeight === "200" ? "700" : "200")
+
+    const clicked = {"backgroundColor" : "red" , "color" : "blue"}
+    const unclicked = {"backgroundColor" : "blue" , "color" : "red"}
+    
+    cardsRefArray.current[e.target.id].style.fontWeight = 
+    (cardsRefArray.current[e.target.id].style.fontWeight === 
+      "200" 
+    ? "700" 
+    : "200")
+
+    buttonsRefArray.current[e.target.id].style = 
+    (cardsRefArray.current[e.target.id].style.fontWeight === 
+      "200" 
+    ? clicked 
+    : unclicked)
 
   }
 
-  const list = [ 1, 2, 3 ]
 
   return (
     <div className="App">
       
       <Navbar />
-      <Card list={list} itemEls={itemEls}/>
-      <Footer handleClick={handleClick}/>
+      <Card list={list} cardsRefArray={cardsRefArray}/>
+      <Footer list={list} buttonsRefArray={buttonsRefArray} handleClick={handleClick}/>
 
     </div>
   );

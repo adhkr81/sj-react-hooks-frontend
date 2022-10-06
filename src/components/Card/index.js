@@ -2,7 +2,7 @@ import { useRef } from "react"
 
 import "./card.css"
 
-export function Card ({list , itemEls}) {
+export function Card ({list , cardsRefArray}) {
 
 
     return (
@@ -10,11 +10,11 @@ export function Card ({list , itemEls}) {
     <div className="screen">
         {list.map((item) => {
             return (
-                <div style={{"fontWeight" : "200"}} key={item} ref={(element) => itemEls.current.push(element)} className="cards">
+                <div style={{"fontWeight" : "200"}} key={item} ref={(element) => cardsRefArray.current.push(element)} className="cards">
                     <div className="numberStyle">{item}</div>
                     <div className="textContainer">Lorem ipsum dolor sit amet. Ut aperiam voluptas qui deserunt sapiente 
                         non impedit recusandae qui maxime fugiat? Ut rerum cumque sed perspiciatis 
-                        quia vel adipisci quidem aut veritatis veritatis </div>            
+                        quia vel adipisci quidem aut veritatis veritatis aoant sea aux denovo no sea</div>            
                 </div>
             )
         })}

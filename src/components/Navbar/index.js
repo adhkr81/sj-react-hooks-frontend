@@ -7,9 +7,9 @@ export function Navbar () {
         <nav className="container">
             <div className="font"><EmojiEmotionsIcon sx={{"color" : "red"}}/></div>
                 <div className="buttonDiv">
-                    <button>useRef Demo</button>
-                    <button>useMemo Demo</button>
-                    <button>useEffect Demo</button>
+                    <button className="useButton">useRef Demo</button>
+                    <button className="useButton">useMemo Demo</button>
+                    <button className="useButton">useEffect Demo</button>
                 </div>
             <div className="font">SEARCH</div>
         </nav>
