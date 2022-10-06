@@ -21,7 +21,7 @@ function App() {
   function handleClick(e) {
 
     if (cardsRefArray.current[e.target.id].style.cssText === "font-weight: 200; border-color: rgb(118, 118, 118); border-width: 1px;") {
-      cardsRefArray.current[e.target.id].style.cssText = "font-weight: 700; border-color: black; border-width: 3px;"
+      cardsRefArray.current[e.target.id].style.cssText = "font-weight: 700; border-color: black; border-width: 2px;"
       footerRefArray.current[e.target.id].style.cssText = "color: white; background-color: black;"
 
 
