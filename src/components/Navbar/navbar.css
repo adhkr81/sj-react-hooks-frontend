@@ -27,6 +27,8 @@
         left: 46%;
         background-color: white;
         border-radius: 100%;
+        width: 24px;
+        height: 24px;
     }
 
     .search {
@@ -101,6 +103,8 @@
         margin-left: 15px;
         background-color: white;
         border-radius: 100%;
+        width: 24px;
+        height: 24px;
     }
 
     .hamburger {
@@ -156,6 +160,8 @@
         margin-left: 15px;
         background-color: white;
         border-radius: 100%;
+        width: 24px;
+        height: 24px;
     }
 
     .hamburger {
