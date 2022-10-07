@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 export function Navbar ({list, navbarRefArray, setActiveBtns, activeBtns}) {
 
-    const handleBtnClick = () => { return setActiveBtns(!activeBtns) }
+    const handleBtnClick = () => { setActiveBtns(!activeBtns) }
 
 
     return (
