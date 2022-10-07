@@ -40,7 +40,9 @@
     .useButton {
         font-size: 0.7em;
         margin-right: 1px;
-        background-color: transparent;
+        padding: 0;
+        border: none;
+        background: none;
     }
 
     .useButton:hover {
@@ -82,12 +84,16 @@
         color: gray;
         font-size: 1.1em;
         margin-right: 60px;
-        background-color: transparent;
+        padding: 0;
+        border: none;
+        background: none;
     }
 
     .useButton:hover {
         color: white;
-        background-color: transparent;
+        padding: 0;
+        border: none;
+        background: none;
     }
 
     .useButton:hover {
@@ -138,7 +144,10 @@
         color: gray;
         font-size: 1.1em;
         margin-right: 60px;
-        background-color: transparent;
+        padding: 0;
+        border: none;
+        background: none;
+        
     }
 
     .useButton:hover {

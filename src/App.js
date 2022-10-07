@@ -4,7 +4,7 @@ import { Footer } from "./components/Footer"
 import { Charts } from "./components/Charts"
 
 import { useEffect, useRef, Fragment } from "react"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import "./index.css"
 
 
@@ -22,6 +22,8 @@ function App() {
   const navbarRefArray = useRef([])
 
   function handleClick(e) {
+
+    console.log(cardsRefArray.current[e.target.id])
 
     if (cardsRefArray.current[e.target.id].style.cssText === "font-weight: 200; border-color: rgb(118, 118, 118); border-width: 1px;") {
       cardsRefArray.current[e.target.id].style.cssText = "font-weight: 700; border-color: black; border-width: 2px;"
@@ -47,6 +49,8 @@ function App() {
       <Navbar list={list} navbarRefArray={navbarRefArray}/>
 
       <Routes>
+          <Route path='/' element={<Navigate to="/useRef" replace />}/>
+
           <Route path='/useRef' element={
                 <Fragment>
                   <Card list={list} cardsRefArray={cardsRefArray}/>

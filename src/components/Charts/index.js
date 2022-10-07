@@ -4,14 +4,18 @@ import axios from "axios"
 
 export function Charts() {
 
-
-    const [states, setStates] = useState()
+    const [getAll, setGetAll] = useState({})
+    const [states, setStates] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         async function getResponse () {
             try {
                 let response = await axios.get("https://js-backend-trial.herokuapp.com/allstates")   
-                 setStates(response.data)
+                 setGetAll(response.data)
+                 setStates(Object.keys(response.data))
+                 setIsLoading(false)
+
             } catch(err) {
                  return console.log('err')
             }
@@ -20,9 +24,15 @@ export function Charts() {
     },[])
 
 
-    console.log(states)
-
     return (
-        <div></div>
+        <>
+        {isLoading && 
+            (<div>Loading</div>)}
+        
+        {isLoading === false && 
+            (<div>
+                {states.map((state) => {return <div key={state}>{state}</div>})}
+            </div>)}
+        </>
     )
 }
