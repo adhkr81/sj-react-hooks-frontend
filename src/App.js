@@ -4,11 +4,20 @@ import { Footer } from "./components/Footer"
 import { Charts } from "./components/Charts"
 
 import { useEffect, useRef, Fragment, useState } from "react"
-import { Routes, Route, Navigate } from "react-router-dom"
+import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 import "./index.css"
 
 
 function App() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if(cardsRefArray.current.length > 4) {
+      cardsRefArray.current = []
+      footerRefArray.current = []
+    }   
+  },[location])
   
   const list = [
     {number: 1 , name: "useRef"},
@@ -22,7 +31,9 @@ function App() {
 
   const [activeBtns, setActiveBtns] = useState(true)
 
-  console.log(activeBtns)
+
+  
+  console.log(cardsRefArray)
 
 
 
@@ -54,7 +65,7 @@ function App() {
       <Routes>
           <Route path='/' element={<Navigate to="/useRef" replace />}/>
 
-          <Route path='/useRef' element={
+          <Route exact path='/useRef' element={
                 <Fragment>
                   <Card list={list} cardsRefArray={cardsRefArray}/>
                   <Footer list={list} 
