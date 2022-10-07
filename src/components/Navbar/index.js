@@ -5,7 +5,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom"
 
 
-export function Navbar ({list, navbarRefArray}) {
+export function Navbar ({list, navbarRefArray, setActiveBtns, activeBtns}) {
+
+    const handleBtnClick = () => { return setActiveBtns(!activeBtns) }
+
 
     return (
         <nav className="container">
@@ -16,6 +19,7 @@ export function Navbar ({list, navbarRefArray}) {
                     return (
                             <Link to={`${item.name}`}>
                                 <button style={{"color": "grey"}} className="useButton" id={item.number}
+                                        onClick={handleBtnClick}
                                         ref={(element) => navbarRefArray.current.push(element)}>
                                             {item.name} Demo
                                 </button>

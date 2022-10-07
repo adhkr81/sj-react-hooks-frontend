@@ -1,4 +1,6 @@
+
 import "./footer.css"
+
 
 export function Footer ({handleClick, footerRefArray, list}) {
 

@@ -3,13 +3,12 @@ import { Card } from "./components/Card"
 import { Footer } from "./components/Footer"
 import { Charts } from "./components/Charts"
 
-import { useEffect, useRef, Fragment } from "react"
+import { useEffect, useRef, Fragment, useState } from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
 import "./index.css"
 
 
 function App() {
-
   
   const list = [
     {number: 1 , name: "useRef"},
@@ -21,19 +20,23 @@ function App() {
   const footerRefArray = useRef([])
   const navbarRefArray = useRef([])
 
-  function handleClick(e) {
+  const [activeBtns, setActiveBtns] = useState(true)
 
-    console.log(cardsRefArray.current[e.target.id])
-
-    if (cardsRefArray.current[e.target.id].style.cssText === "font-weight: 200; border-color: rgb(118, 118, 118); border-width: 1px;") {
-      cardsRefArray.current[e.target.id].style.cssText = "font-weight: 700; border-color: black; border-width: 2px;"
-      footerRefArray.current[e.target.id].style.cssText = "color: white; background-color: black;"
+  console.log(activeBtns)
 
 
-    } else {
-      cardsRefArray.current[e.target.id].style.cssText = "font-weight: 200; border-color: rgb(118, 118, 118); border-width: 1px;"
-      footerRefArray.current[e.target.id].style.cssText = "color: black; background-color: white;"
-    }
+
+  const handleClick = (e) => {    
+
+      setActiveBtns(!activeBtns)
+
+      if (cardsRefArray.current[e.target.id].style.cssText === "font-weight: 200; border-color: rgb(118, 118, 118); border-width: 1px;") {
+        cardsRefArray.current[e.target.id].style.cssText = "font-weight: 700; border-color: black; border-width: 2px;"
+        footerRefArray.current[e.target.id].style.cssText = "color: white; background-color: black;"
+      } else {
+        cardsRefArray.current[e.target.id].style.cssText = "font-weight: 200; border-color: rgb(118, 118, 118); border-width: 1px;"
+        footerRefArray.current[e.target.id].style.cssText = "color: black; background-color: white;"
+      }
   }
 
 
@@ -46,7 +49,7 @@ function App() {
   return (
     <div className="App">
       
-      <Navbar list={list} navbarRefArray={navbarRefArray}/>
+      <Navbar list={list} navbarRefArray={navbarRefArray} activeBtns={activeBtns} setActiveBtns={setActiveBtns}/>
 
       <Routes>
           <Route path='/' element={<Navigate to="/useRef" replace />}/>
@@ -54,7 +57,9 @@ function App() {
           <Route path='/useRef' element={
                 <Fragment>
                   <Card list={list} cardsRefArray={cardsRefArray}/>
-                  <Footer list={list} footerRefArray={footerRefArray} handleClick={handleClick}/>
+                  <Footer list={list} 
+                  footerRefArray={footerRefArray} 
+                  handleClick={handleClick}/>
                 </Fragment>
           } />
 
