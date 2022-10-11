@@ -2,6 +2,7 @@ import { Navbar } from "./components/Navbar"
 import { Card } from "./components/Card"
 import { Footer } from "./components/Footer"
 import { Charts } from "./components/Charts"
+import { Test } from "./components/Test"
 
 import { useEffect, useRef, Fragment, useState } from "react"
 import { Routes, Route, Navigate, useLocation } from "react-router-dom"
@@ -29,7 +30,6 @@ function App() {
   const footerRefArray = useRef([])
   const navbarRefArray = useRef([])
 
-  const [activeBtns, setActiveBtns] = useState(true)
 
 
   
@@ -37,9 +37,9 @@ function App() {
 
 
 
-  const handleClick = (e) => {    
+  function handleClick(e) {    
 
-      setActiveBtns(!activeBtns)
+
 
       if (cardsRefArray.current[e.target.id].style.cssText === "font-weight: 200; border-color: rgb(118, 118, 118); border-width: 1px;") {
         cardsRefArray.current[e.target.id].style.cssText = "font-weight: 700; border-color: black; border-width: 2px;"
@@ -60,7 +60,7 @@ function App() {
   return (
     <div className="App">
       
-      <Navbar list={list} navbarRefArray={navbarRefArray} activeBtns={activeBtns} setActiveBtns={setActiveBtns}/>
+      <Navbar list={list} navbarRefArray={navbarRefArray} />
 
       <Routes>
           <Route path='/' element={<Navigate to="/useRef" replace />}/>
@@ -75,6 +75,8 @@ function App() {
           } />
 
           <Route path='/useMemo' element={<Charts />} />
+
+          <Route path='/useEffect' element={<Test />} />
 
       </Routes>
 
